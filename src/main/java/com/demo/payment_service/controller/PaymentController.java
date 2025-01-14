@@ -25,8 +25,8 @@ public class PaymentController {
         return new ResponseEntity<>(service.getAPayment(id), HttpStatus.OK);
     }
 
-    @PostMapping("")
-    public ResponseEntity<Payments> addAPayment(@RequestBody Payments payments){
-        return new ResponseEntity<>(service.addAPayment(payments), HttpStatus.OK);
+    @GetMapping("/lastId")
+    public ResponseEntity<Integer> getLatestPaymentId(){
+        return new ResponseEntity<>(service.getLatestPaymentId(), HttpStatus.OK);
     }
 }

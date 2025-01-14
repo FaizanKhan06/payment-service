@@ -16,11 +16,14 @@ import lombok.NoArgsConstructor;
 public class Payments {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
-    @Column(name = "payment_type")
-    private String paymentType;
+    @Column(name = "order_id")
+    private int orderId;
+
+    @Column(name = "card_number")
+    private int cardNumber;
 
 }
